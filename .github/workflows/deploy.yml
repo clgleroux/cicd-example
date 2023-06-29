@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Build
-      #   run: npm run build-prod
-
       - name: Run tests
         run: npm run test
 
@@ -58,18 +55,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Build
-      #   run: npm run build-prod
-
-      - name: Zip
+      - name: Create zip
         run: zip release.zip ./* -r
 
-      - name: Upload
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: node-app
           path: release.zip
 
-      - uses: azure/webapps-deploy@v2
+      - name: Deploy Azure
+        uses: azure/webapps-deploy@v2
         with:
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
