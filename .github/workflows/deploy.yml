@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build-prod
+      # - name: Build
+      #   run: npm run build-prod
 
       # - name: Run tests
       #   run: npm run test-ci
@@ -58,8 +58,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build-prod
+      # - name: Build
+      #   run: npm run build-prod
 
       - name: Zip
         run: zip release.zip ./* -r
