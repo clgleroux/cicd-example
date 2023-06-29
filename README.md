@@ -1,3 +1,3 @@
 # CICD EXAMPLE
 
-[Website](https://cicdexampleleroux.azurewebsites.net/)
+<a href="https://cicdexampleleroux.azurewebsites.net/" target="_blank">Website</a>
